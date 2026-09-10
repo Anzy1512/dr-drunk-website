@@ -1,3 +1,36 @@
 "use client";
-import {useEffect} from 'react';
-export function Reveals(){useEffect(()=>{const media=window.matchMedia('(prefers-reduced-motion: reduce)');if(media.matches)return;const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}},{threshold:.07});const nodes=document.querySelectorAll('.reveal');for(const node of nodes){node.classList.add('will-reveal');observer.observe(node);}const change=()=>{if(media.matches){nodes.forEach(node=>node.classList.add('is-visible'));observer.disconnect();}};media.addEventListener('change',change);return()=>{observer.disconnect();media.removeEventListener('change',change);};},[]);return null;}
+import { useEffect } from "react";
+export function Reveals() {
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (media.matches) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.07 },
+    );
+    const nodes = document.querySelectorAll(".reveal");
+    for (const node of nodes) {
+      node.classList.add("will-reveal");
+      observer.observe(node);
+    }
+    const change = () => {
+      if (media.matches) {
+        nodes.forEach((node) => node.classList.add("is-visible"));
+        observer.disconnect();
+      }
+    };
+    media.addEventListener("change", change);
+    return () => {
+      observer.disconnect();
+      media.removeEventListener("change", change);
+    };
+  }, []);
+  return null;
+}

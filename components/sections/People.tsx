@@ -1,1 +1,38 @@
-export function People(){return <section className="people section-pad" aria-labelledby="people-title"><figure className="team-photo reveal"><img src="/brand/team.webp" alt="The Dr. Drunk team together behind a decorated event bar" width="1200" height="900" loading="lazy"/><figcaption>YOUR PARTY PRACTITIONERS, IN THEIR ELEMENT.</figcaption></figure><div className="people-copy reveal"><p className="eyebrow">05 / The people behind the pour</p><h2 id="people-title">A warm smile.<br />A cold drink.<br /><span className="script">That’s our style.</span></h2><p>Mixology, flair and hospitality come together in a team that treats your celebration personally. Quality, speed and creativity are at the heart of our practice.</p><p className="team-line">Craftsmen. Hypemen. Your bar people.</p><div className="collabs"><p className="eyebrow">Previous collaborations</p><p>Sith Photography · Masala Magazine · TSA Events · Daddy’s Bell Bar · BDS by Shreya · The Artsy Diwali</p></div></div></section>;}
+export function People() {
+  return (
+    <section className="people section-pad" aria-labelledby="people-title">
+      <figure className="team-photo reveal">
+        <img
+          src="/brand/team.webp"
+          alt="The Dr. Drunk team together behind a decorated event bar"
+          width="1200"
+          height="900"
+          loading="lazy"
+        />
+        <figcaption>YOUR PARTY PRACTITIONERS, IN THEIR ELEMENT.</figcaption>
+      </figure>
+      <div className="people-copy reveal">
+        <p className="eyebrow">05 / The people behind the pour</p>
+        <h2 id="people-title">
+          A warm smile.
+          <br />A cold drink.
+          <br />
+          <span className="script">That’s our style.</span>
+        </h2>
+        <p>
+          Mixology, flair and hospitality come together in a team that treats
+          your celebration personally. Quality, speed and creativity are at the
+          heart of our practice.
+        </p>
+        <p className="team-line">Craftsmen. Hypemen. Your bar people.</p>
+        <div className="collabs">
+          <p className="eyebrow">Previous collaborations</p>
+          <p>
+            Sith Photography · Masala Magazine · TSA Events · Daddy’s Bell Bar ·
+            BDS by Shreya · The Artsy Diwali
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

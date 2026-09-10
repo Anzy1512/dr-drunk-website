@@ -1,5 +1,88 @@
 "use client";
-import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
-import {ArrowUpRight} from 'lucide-react';
-import {cocktailCategories,TASTING_LINK} from '@/lib/brand-content';
-export function CocktailLab(){return <section className="cocktail-lab section-pad" id="cocktails" aria-labelledby="cocktails-title"><div className="section-heading reveal"><div><p className="eyebrow">02 / A taste of the unexpected</p><h2 id="cocktails-title">100+ ways<br />to break the ice<span className="orange-dot">.</span></h2></div><p>Chai in your whisky?<br />Papaya salad in your cocktail?<br /><span className="script">Now you’re thinking like us.</span></p></div><Tabs defaultValue="spice" className="menu-explorer"><TabsList className="menu-tabs" variant="line" aria-label="Cocktail categories">{cocktailCategories.map(category=><TabsTrigger value={category.id} key={category.id}>{category.label}</TabsTrigger>)}</TabsList><div className="menu-layout"><figure className="menu-photo reveal"><img src="/brand/signature.webp" width="1100" height="781" alt="A garnished Dr. Drunk cocktail from the company’s mixology collection" loading="lazy"/><figcaption><span className="script">Good taste. Great company.</span><span>A POUR FROM OUR REPERTOIRE</span></figcaption></figure><div className="menu-list">{cocktailCategories.map(category=><TabsContent value={category.id} key={category.id}><p className="menu-note">{category.note}</p><ol>{category.drinks.map((drink,i)=><li key={drink.name}><span className="drink-number">0{i+1}</span><div><h3>{drink.name}</h3><p>{drink.ingredients}</p></div><span className="drink-tag">{drink.tag}</span></li>)}</ol></TabsContent>)}<div className="menu-footer"><p>A few favourites from our 100+ non-classic options.<br />Your final menu is made around you.</p><a href={TASTING_LINK} className="text-link">Find your flavour <ArrowUpRight size={18}/></a></div></div></div></Tabs></section>;}
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { ArrowUpRight } from "lucide-react";
+import { cocktailCategories, TASTING_LINK } from "@/lib/brand-content";
+export function CocktailLab() {
+  return (
+    <section
+      className="cocktail-lab section-pad"
+      id="cocktails"
+      aria-labelledby="cocktails-title"
+    >
+      <div className="section-heading reveal">
+        <div>
+          <p className="eyebrow">02 / A taste of the unexpected</p>
+          <h2 id="cocktails-title">
+            100+ ways
+            <br />
+            to break the ice<span className="orange-dot">.</span>
+          </h2>
+        </div>
+        <p>
+          Chai in your whisky?
+          <br />
+          Papaya salad in your cocktail?
+          <br />
+          <span className="script">Now you’re thinking like us.</span>
+        </p>
+      </div>
+      <Tabs defaultValue="spice" className="menu-explorer">
+        <TabsList
+          className="menu-tabs"
+          variant="line"
+          aria-label="Cocktail categories"
+        >
+          {cocktailCategories.map((category) => (
+            <TabsTrigger value={category.id} key={category.id}>
+              {category.label}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+        <div className="menu-layout">
+          <figure className="menu-photo reveal">
+            <img
+              src="/brand/signature.webp"
+              width="1100"
+              height="781"
+              alt="A garnished Dr. Drunk cocktail from the company’s mixology collection"
+              loading="lazy"
+            />
+            <figcaption>
+              <span className="script">Good taste. Great company.</span>
+              <span>A POUR FROM OUR REPERTOIRE</span>
+            </figcaption>
+          </figure>
+          <div className="menu-list">
+            {cocktailCategories.map((category) => (
+              <TabsContent value={category.id} key={category.id}>
+                <p className="menu-note">{category.note}</p>
+                <ol>
+                  {category.drinks.map((drink, i) => (
+                    <li key={drink.name}>
+                      <span className="drink-number">0{i + 1}</span>
+                      <div>
+                        <h3>{drink.name}</h3>
+                        <p>{drink.ingredients}</p>
+                      </div>
+                      <span className="drink-tag">{drink.tag}</span>
+                    </li>
+                  ))}
+                </ol>
+              </TabsContent>
+            ))}
+            <div className="menu-footer">
+              <p>
+                A few favourites from our 100+ non-classic options.
+                <br />
+                Your final menu is made around you.
+              </p>
+              <a href={TASTING_LINK} className="text-link">
+                Find your flavour <ArrowUpRight size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </Tabs>
+    </section>
+  );
+}

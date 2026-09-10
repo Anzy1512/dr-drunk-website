@@ -15,5 +15,8 @@ Hero object has a deliberately angled but legible silhouette. Scroll moves the c
 ## Performance
 Cap DPR at 1.5 desktop and 1 on constrained displays. Use moderate 64-segment lathe profiles, shared materials, a small number of geometries and no shadows or heavy transmission render passes. Reuse geometry. ResizeObserver maintains aspect. Dispose renderer, geometry, materials, textures, environment targets and event handlers at unmount. Context loss reveals fallback and restoration can be triggered without blocking content.
 
+## Multi-page extension
+GSAP ScrollTrigger smooths the camera's two-chapter progression; a dedicated cocktail-page installation reuses the physical sculpture and studio environment. Selecting three source-supported flavour examples changes the liquid's colour through a short GSAP interpolation. These are interpretations of menu flavours, not photographic claims about exact serving appearance. The frame, material and render lifecycle stay shared. Each route owns at most one canvas and releases it during navigation.
+
 ## Mobile
 Portrait arrival composition shows original drink photography in a deliberate crop. Editorial hierarchy and all interactions remain intact. Touch does not require dragging a canvas; native vertical scrolling remains available.

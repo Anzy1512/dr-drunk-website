@@ -15,7 +15,12 @@ const eslintConfig = defineConfig([
   ]),
   {
     files: ["app/**/*.tsx", "components/layout/**/*.tsx", "components/sections/**/*.tsx"],
-    rules: { "@next/next/no-img-element": "off" },
+    rules: {
+      "@next/next/no-img-element": "off",
+      // Native document navigation avoids Vinext beta's production Link
+      // prefetch/transition error. It also keeps every page usable without JS.
+      "@next/next/no-html-link-for-pages": "off",
+    },
   },
   {
     files: ["components/ui/**/*.{ts,tsx}", "hooks/use-mobile.ts"],

@@ -1,3 +1,116 @@
-import {ArrowUpRight} from 'lucide-react';
-import {INSTAGRAM} from '@/lib/brand-content';
-export function GoodTimes(){return <section id="good-times" className="good-times section-pad" aria-labelledby="good-times-title"><div className="section-heading reveal"><div><p className="eyebrow">04 / Beyond the cocktail</p><h2 id="good-times-title">We bring the<br /><span className="script">enter“treatment”.</span></h2></div><p>Flair behind the bar.<br />Energy on the dancefloor.<br />Little details everywhere.</p></div><div className="event-gallery"><figure className="event-photo event-bar reveal"><img src="/brand/bar.webp" alt="An elaborate golden bar installation glowing at a night-time event" width="1067" height="1600" loading="lazy"/><figcaption><span>01 / SET THE SCENE</span><h3>A bar with a personality.</h3><p>The glassware, the props, the presentation.<br />All part of your world.</p></figcaption></figure><figure className="event-photo event-party reveal"><img src="/brand/party.webp" alt="Guests and entertainers celebrating together on a crowded dancefloor" width="1500" height="1000" loading="lazy"/><figcaption><span>02 / FEEL THE ROOM</span><h3>Good drinks. Better memories.</h3><p>Warm smiles, cold drinks, and a team<br />that gets the party going.</p></figcaption></figure><figure className="event-photo event-flair reveal"><img src="/brand/flair.webp" alt="A Dr. Drunk performer in an orange costume adding playful flair to a daytime event" width="1067" height="1600" loading="lazy"/><figcaption><span>03 / EXPECT THE UNEXPECTED</span><h3>A little extra mischief.</h3><p>Costumes, games and playful props.<br />We make room for your kind of fun.</p></figcaption></figure><div className="gallery-invitation reveal"><span className="script">See you<br />on the dancefloor.</span><a href={INSTAGRAM} target="_blank" rel="noreferrer" className="text-link">More good times on Instagram <ArrowUpRight size={18}/></a></div></div><div className="details-strip"><img src="/brand/details.webp" alt="Bespoke drink stirrers with personalized labels" width="280" height="350" loading="lazy"/><div><p className="eyebrow">The tiny details matter</p><p>Custom menus. Stamped coconuts. Initialled stirrers. Story-led coasters. The small touches that make the whole bar feel like yours.</p></div></div></section>;}
+import { ArrowUpRight } from "lucide-react";
+import { INSTAGRAM } from "@/lib/brand-content";
+export function GoodTimes() {
+  return (
+    <section
+      id="good-times"
+      className="good-times section-pad"
+      aria-labelledby="good-times-title"
+    >
+      <div className="section-heading reveal">
+        <div>
+          <p className="eyebrow">04 / Beyond the cocktail</p>
+          <h2 id="good-times-title">
+            We bring the
+            <br />
+            <span className="script">enter“treatment”.</span>
+          </h2>
+        </div>
+        <p>
+          Flair behind the bar.
+          <br />
+          Energy on the dancefloor.
+          <br />
+          Little details everywhere.
+        </p>
+      </div>
+      <div className="event-gallery">
+        <figure className="event-photo event-bar reveal">
+          <img
+            src="/brand/bar.webp"
+            alt="An elaborate golden bar installation glowing at a night-time event"
+            width="1067"
+            height="1600"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>01 / SET THE SCENE</span>
+            <h3>A bar with a personality.</h3>
+            <p>
+              The glassware, the props, the presentation.
+              <br />
+              All part of your world.
+            </p>
+          </figcaption>
+        </figure>
+        <figure className="event-photo event-party reveal">
+          <img
+            src="/brand/party.webp"
+            alt="Guests and entertainers celebrating together on a crowded dancefloor"
+            width="1500"
+            height="1000"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>02 / FEEL THE ROOM</span>
+            <h3>Good drinks. Better memories.</h3>
+            <p>
+              Warm smiles, cold drinks, and a team
+              <br />
+              that gets the party going.
+            </p>
+          </figcaption>
+        </figure>
+        <figure className="event-photo event-flair reveal">
+          <img
+            src="/brand/flair.webp"
+            alt="A Dr. Drunk performer in an orange costume adding playful flair to a daytime event"
+            width="1067"
+            height="1600"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>03 / EXPECT THE UNEXPECTED</span>
+            <h3>A little extra mischief.</h3>
+            <p>
+              Costumes, games and playful props.
+              <br />
+              We make room for your kind of fun.
+            </p>
+          </figcaption>
+        </figure>
+        <div className="gallery-invitation reveal">
+          <span className="script">
+            See you
+            <br />
+            on the dancefloor.
+          </span>
+          <a
+            href={INSTAGRAM}
+            target="_blank"
+            rel="noreferrer"
+            className="text-link"
+          >
+            More good times on Instagram <ArrowUpRight size={18} />
+          </a>
+        </div>
+      </div>
+      <div className="details-strip">
+        <img
+          src="/brand/details.webp"
+          alt="Bespoke drink stirrers with personalized labels"
+          width="280"
+          height="350"
+          loading="lazy"
+        />
+        <div>
+          <p className="eyebrow">The tiny details matter</p>
+          <p>
+            Custom menus. Stamped coconuts. Initialled stirrers. Story-led
+            coasters. The small touches that make the whole bar feel like yours.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
