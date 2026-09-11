@@ -5,6 +5,7 @@ import { createLighting } from "./StudioLighting";
 import { directCamera } from "./CameraRig";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { createFlavourTheatre } from "./FlavourTheatre";
 
 export type Experience = {
   dispose: () => void;
@@ -37,6 +38,10 @@ export function createExperience(
   const sculpture = createCocktail(),
     brand = createStethoscope();
   scene.add(sculpture, brand);
+  const theatre = createFlavourTheatre();
+  scene.add(theatre.group);
+  sculpture.add(theatre.surface, theatre.bubbles);
+  theatre.update(0, 0);
   const disposeLighting = createLighting(renderer, scene);
   const pointer = new THREE.Vector2();
   let paused = false,
@@ -45,6 +50,7 @@ export function createExperience(
     disposed = false,
     frame = 0,
     start = performance.now();
+  let lastTick = start, motionTime = 0;
   const director = { progress: 0 };
   const journey = opening.classList.contains("opening")
     ? gsap.to(director, {
@@ -64,13 +70,17 @@ export function createExperience(
     frame = 0;
     if (disposed || lost || !visible || document.hidden) return;
     const progress = director.progress;
+    const delta = Math.min((now - lastTick) / 1000, 0.05);
+    lastTick = now;
+    if (!paused) motionTime += delta;
+    theatre.update(motionTime, progress);
     directCamera(
       camera,
       sculpture,
       brand,
       progress,
       pointer,
-      (now - start) / 1000,
+      motionTime,
       !paused,
     );
     try {
@@ -166,6 +176,7 @@ export function createExperience(
     },
     setPaused(value) {
       paused = value;
+      lastTick = performance.now();
       pointer.set(0, 0);
       if (paused) {
         cancelAnimationFrame(frame);

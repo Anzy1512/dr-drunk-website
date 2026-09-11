@@ -20,3 +20,8 @@ GSAP ScrollTrigger smooths the camera's two-chapter progression; a dedicated coc
 
 ## Mobile
 Portrait arrival composition shows original drink photography in a deliberate crop. Editorial hierarchy and all interactions remain intact. Touch does not require dragging a canvas; native vertical scrolling remains available.
+
+## Branded motion extension
+The shared scene now includes a segmented citrus wheel, shaped mint leaves, 18 instanced carbonation bubbles and a translucent procedural liquid shimmer. Bubbles and shimmer remain attached to the glass; the garnish composition follows the scroll journey. A wider, gently rising camera orbit emphasizes depth. Elapsed animation time freezes when paused, with no jump on resumption. The enhancement retains the same deferred canvas, shared geometry/material disposal and device fallbacks.
+
+Outside the canvas, the deck pattern, original line illustrations, amber prescription stamp and scrolling typographic ribbon extend the same visual vocabulary. GSAP controls scroll-linked headings, cards and photo parallax; CSS handles restrained ambient drift. Reduced-motion preference bypasses these movement effects.

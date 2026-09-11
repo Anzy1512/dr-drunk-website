@@ -4,11 +4,15 @@ import { Story } from "@/components/sections/Story";
 import { GoodTimes } from "@/components/sections/GoodTimes";
 import { People } from "@/components/sections/People";
 import { Reveals } from "@/components/motion/Reveals";
+import { IllustratedPractice } from "@/components/sections/IllustratedPractice";
+import { PartyTape } from "@/components/sections/PartyTape";
 export default function Home() {
   return (
     <>
       <main id="main">
         <Opening />
+        <PartyTape />
+        <IllustratedPractice />
         <CocktailLab />
         <a className="chapter-link" href="/cocktails">
           Explore the complete cocktail collection <span>→</span>

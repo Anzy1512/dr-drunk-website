@@ -111,6 +111,7 @@ export function Opening() {
           <div className="specimen-label">
             <span>01</span> SPIRIT. SCIENCE. A LITTLE MISCHIEF.
           </div>
+          <div className="good-times-stamp" aria-hidden="true"><span>GOOD TIMES</span><strong>Rx</strong><span>PRESCRIBED</span></div>
         </div>
       </div>
       <section className="arrival" aria-labelledby="arrival-title">
@@ -137,6 +138,7 @@ export function Opening() {
           <a href="#practice" className="scroll-note">
             <ArrowDown size={16} /> Scroll for your prescription
           </a>
+          <div className="hero-flavour-note"><span>100+</span><p>Non-classic cocktail options.<br /><strong>One menu that feels like you.</strong></p><span className="note-spark" aria-hidden="true">✳</span></div>
         </div>
         <p className="hero-edition">
           YOUR TOTAL BAR SOLUTION <span>01 / THE FIRST SIP</span>

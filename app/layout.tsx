@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./experience.css";
 import "./pages.css";
+import "./brand-motion.css";
+import { BrandAtmosphere } from "@/components/motion/BrandAtmosphere";
+import { GlassMotion } from "@/components/motion/GlassMotion";
+import { ScrollChoreography } from "@/components/motion/ScrollChoreography";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageMotion } from "@/components/motion/PageMotion";
@@ -33,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <BrandAtmosphere />
         <a className="skip-link" href="#main">
           Skip to content
         </a>
@@ -40,6 +45,8 @@ export default function RootLayout({
         {children}
         <Footer />
         <PageMotion />
+        <GlassMotion />
+        <ScrollChoreography />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

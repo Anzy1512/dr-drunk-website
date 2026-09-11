@@ -15,10 +15,17 @@
 
 ## Performance and limits
 
-The deferred scene chunk is 609,439 bytes minified / 157,356 bytes gzip. It is separated from the initial application and skipped on the mobile/reduced-motion/constrained-device fallback path. Selected brand WebP images total approximately 1.7 MB; the complete gallery approximately 5.2 MB, loaded progressively with lazy images. The original PDF guides are large downloads (roughly 16–23 MB each) and are not fetched during normal page reading.
+The deferred scene chunk is 582,745 bytes minified / 146,744 bytes gzip (11 September motion build). It is separated from the initial application and skipped on the mobile/reduced-motion/constrained-device fallback path. Selected brand WebP images total approximately 1.7 MB; the complete gallery approximately 5.2 MB, loaded progressively with lazy images. The original PDF guides are large downloads (roughly 16–23 MB each) and are not fetched during normal page reading.
 
 The build reports a >500 kB chunk advisory for the deferred Three.js scene, plus Vinext beta's route-classification notice. Neither prevents the completed build. No field Core Web Vitals, low-end physical-device FPS, or cross-browser Safari measurement is claimed. Reduced-motion and context-loss paths were inspected in source; exhaustive hardware emulation was not performed.
 
 The local Wrangler preview encountered an environment filesystem restriction. Compiled output was exercised through its actual fetch export with a Node adapter; hosted Worker deployment remains the production environment. Enquiry actions open the visitor's email/telephone app and were verified as links without sending messages or placing calls.
 
 This is a narrative marketing website; its central journey is reading, navigating, selecting inspiration and opening source material. It does not perform backend transactions or need a WebMCP mutation surface.
+
+
+## 11 September motion completion
+
+TypeScript and application ESLint passed. The final Sites production build passed after the spacing corrections. Browser inspection confirmed the citrus/mint scene on home and cocktails, working pause state, Guava Island selection and liquid colour, the scrolling ribbon and illustration entrances, and mobile glass navigation to Cocktails. No console errors or warnings were reported in the updated preview tab. Desktop horizontal scroll width equals the document viewport width; the hero note clears the footer line by 49px. The cocktail page also has no horizontal overflow at 390px. Existing content and catalogue/gallery checks above remain applicable because their source data and interactions were preserved.
+
+The local preview process was restored after the interrupted session. The browser retained an inaccessible connection-error tab, so the working preview was opened in a replacement tab. Source requirements are mapped in REQUEST_AUDIT.md.
