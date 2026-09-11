@@ -14,8 +14,6 @@ export default function Gallery() {
         title="The night ends."
         accent="The stories don’t."
         description="The bars, the people, the little details. A look inside the Dr. Drunk world, one very good time after another."
-        image="/brand/party.webp"
-        alt="Guests and performers together on a lively dancefloor"
         href="#archive"
       />
       <EventArchive />

@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/gallery",
     "/about",
     "/contact",
+    "/faq",
+    "/site-info",
   ].map((path) => ({
     url: `${SITE_URL}${path}`,
     changeFrequency: "monthly",

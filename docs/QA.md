@@ -29,3 +29,13 @@ This is a narrative marketing website; its central journey is reading, navigatin
 TypeScript and application ESLint passed. The final Sites production build passed after the spacing corrections. Browser inspection confirmed the citrus/mint scene on home and cocktails, working pause state, Guava Island selection and liquid colour, the scrolling ribbon and illustration entrances, and mobile glass navigation to Cocktails. No console errors or warnings were reported in the updated preview tab. Desktop horizontal scroll width equals the document viewport width; the hero note clears the footer line by 49px. The cocktail page also has no horizontal overflow at 390px. Existing content and catalogue/gallery checks above remain applicable because their source data and interactions were preserved.
 
 The local preview process was restored after the interrupted session. The browser retained an inaccessible connection-error tab, so the working preview was opened in a replacement tab. Source requirements are mapped in REQUEST_AUDIT.md.
+
+## 12 September dark theme and gallery completion
+
+The new gallery replaces the earlier progressive grid. Desktop checks at 1440 × 900 confirmed three photos per group, 01–03 to 04–06 movement, End reaching 48–50 with Next disabled, full-image navigation from photo 48 to 49, and Escape dismissal. At 390 × 844 the rail and slide widths match (330px), showing one photo at a time with no document overflow. Home returns to the first photo. All 50 original entries remain available.
+
+Mobile glass navigation opened and reached Experiences. FAQ opens through the Enter key. Dark theme, photo captions, source-derived serving illustrations, shared footer and focus treatment were visually inspected. The desktop homepage initializes one Three.js canvas. No browser console errors or warnings were reported in these checks.
+
+The compiled Worker returned 200 for all nine pages, sitemap and robots, and 404 for an unknown route. Every page has exactly one H1, metadata, a canonical, social image metadata and valid Organization JSON-LD. FAQPage contains all eight questions; sitemap contains nine URLs. No repeated image sources occur within any of the nine server-rendered pages. The gallery has 50 unique photo sources plus the single header logo.
+
+TypeScript, application ESLint and Sites production build passed. The known deferred Three.js chunk advisory and Vinext route-classification notice remain non-blocking. Physical-device performance and Safari coverage retain the limitations documented above.

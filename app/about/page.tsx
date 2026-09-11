@@ -15,8 +15,8 @@ export default function About() {
         title="Your bar jinn."
         accent="At your service."
         description="We’re a customizable mixologist service and total bar solution. Think fun, flavourful, Instagrammable cocktails, made for your occasion."
-        image="/brand/team.webp"
-        alt="The Dr. Drunk team at a decorated bar"
+        image="/gallery/event-42.webp"
+        alt="A bartender and guests sharing a playful moment"
         href="#our-practice"
       />
       <section id="our-practice" className="about-statement section-pad">
@@ -39,7 +39,7 @@ export default function About() {
         </div>
       </section>
       <People />
-      <section className="source-library section-pad">
+      <section className="source-library section-pad" id="guides">
         <p className="eyebrow">EXPLORE THE DR. DRUNK WORLD</p>
         <h2>The full story.</h2>
         <div>

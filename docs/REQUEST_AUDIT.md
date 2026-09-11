@@ -1,4 +1,4 @@
-# Request audit — 11 September 2026
+# Request audit — updated 12 September 2026
 
 The user-authored master prompt and follow-up requests define scope. The supplied decks are reference material. This pass preserves the completed seven-page site and source transcription.
 
@@ -18,3 +18,19 @@ The user-authored master prompt and follow-up requests define scope. The supplie
 | Responsive, accessible and performant | Semantic HTML, keyboard navigation, accessible dialogs/tabs, reduced-motion handling, motion controls, deferred single-canvas scene, small-screen/source-photo fallback and progressive gallery. QA.md records tests and limitations. |
 
 No invented testimonials, event results, current product availability, serving quantities or legal endorsements were added. The website invites enquiries using the supplied email, telephone and Instagram contacts; it does not claim to send a booking or provide a transactional backend. Proprietary deck script fonts use a licensed handwritten substitute as recorded in the brand analysis. Physical-device performance and Safari coverage remain unmeasured, not represented as completed certification.
+
+## Final theme and gallery requests
+
+The later dark-theme request supersedes the earlier cream background. Existing source extraction, catalogue, content and Three.js work were retained.
+
+| Request | Final implementation |
+|---|---|
+| Dark, funky, brand-synchronised background throughout | Shared night-theme.css applies ink backgrounds, the original deck pattern, cream typography, amber lettering, floating cocktail motifs and warm glass controls to every route. |
+| No repeated image on a page | Footer logo is live text; gallery hero is original vector artwork; About, Weddings and story chapters have distinct photos. Nine compiled routes have no repeated img source. Carousel contains no clone slides; the enlarged photo temporarily replaces its thumbnail. |
+| Photo-derived design elements | Original teapot, textured stemware and personalised stirrer vector interpretations follow event-38, event-32 and event-08. ASSET_MANIFEST.md records provenance. |
+| Add supplied photographs; three-photo slider | All 50 supplied photos retained in a scroll-snap carousel: three at desktop width, one on mobile; arrows, Home/End and left/right keys, touch scrolling, range/progress, captions and full-image dialog. |
+| SEO, FAQ and GEC | Unique page metadata/canonicals, social previews, Organization and FAQPage structured data, nine-route sitemap and robots. GEC interpreted as GEO/search discoverability: readable factual content and internal links, with no invented ranking mechanism. |
+| Socials and delivery essentials | Verified Instagram/email/phone, explicit copy-link action, full footer directory, enquiry process, FAQ and website-information pages. No fabricated social accounts or inactive controls. |
+| Continue without rebuilding completed work | Existing source extraction, 100 catalogue rows, 14 gimmicks, eight services, six wedding directions, team/collaborators and four downloadable originals retained. Previous interactions remain in place. |
+
+Search metadata is prepared, but the current access-controlled site is not publicly crawlable. Existing sharing is preserved. Public search visibility requires an explicit access decision and search-engine crawling; no ranking or rich-result guarantee is made.

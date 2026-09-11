@@ -4,7 +4,7 @@ The complete source inventory lives in `docs/source-inventory.json`. Source revi
 
 | Original | Class / interpretation | Website asset or geometry | Usage / motion | Fallback / priority |
 |---|---|---|---|---|
-| Profile p1 embedded X4.png | A: original logo | Crop retaining wordmark, drink and stethoscope; no redraw | Header and footer | Same image / critical |
+| Profile p1 embedded X4.png | A: original logo | Crop retaining wordmark, drink and stethoscope; no redraw | Header; footer uses live typographic text to avoid a repeated image | Same image / critical |
 | Profile p1 background | C: isometric textile pattern | Unmarked crop | Dark scene and footer texture | CSS solid dark / low |
 | Profile p1 drink-letter + p5 glassware; ZIP 6.png | B: physical cocktail craft | Lathed coupe, liquid volume, ice cubes, citrus peel | Hero + discovery; eased scroll and pointer | 6.png photo / critical visual, deferred GPU |
 | Profile p1 stethoscope | B/D: party-practitioner signature | Spline tube, twin ears, round head | Continuous framing of the cocktail | Original logo / medium |
@@ -22,3 +22,9 @@ The complete source inventory lives in `docs/source-inventory.json`. Source revi
 | Profile p20 | E: contact information | Email / telephone / Instagram links | Conversion | Native HTML / critical |
 
 The user's subsequent request to include all information and elements authorizes the expanded archive: all 50 ZIP photos are optimized under `public/gallery/`, with filename provenance and descriptive alternatives in `lib/gallery-data.json`. The four original, unchanged PDFs are available under `public/guides/` and linked contextually as well as from About. No unrelated generated imagery, external model or unlicensed embedded font is used. Logo and photo crops are production derivatives authorized by the brief's extraction/optimization requirements.
+
+## 12 September additions
+
+`ServingObjects.tsx` interprets the teapot service (IMG_4582.JPG / event-38), textured green glassware (IMG_4575.JPG / event-32), and personalised stirrers (16.png / event-08) as original amber line illustrations. These are contextual vector artwork, not claims of additional event photography. `NightEmblem.tsx` adds an original three-frame cocktail/archive illustration and slow decorative orbit to the gallery introduction.
+
+The gallery retains each of the 50 photos once, without cloned carousel slides. Opening a full-size photo temporarily replaces its thumbnail. About uses event-42 as its introduction; Weddings uses event-12. Story chapters use couple.webp, event-32 and event-22, avoiding duplicates elsewhere on the same page. Cross-page reuse of a relevant source photograph remains intentional.

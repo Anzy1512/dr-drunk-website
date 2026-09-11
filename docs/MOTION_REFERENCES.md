@@ -15,6 +15,6 @@ These are visual and interaction references, not vendored copies of third-party 
 
 `BrandIllustration.tsx` contains four original scalable line illustrations: a coupe entwined with a stethoscope, citrus, cocktail shaker, and a toast with a heart. `IllustratedPractice.tsx` presents three linked illustrated glass cards. Ink draws when cards enter view; the garnish turns and line art rises on hover. Original event photography remains the evidence for actual events and service.
 
-`BrandAtmosphere.tsx` reuses the exact supplied pattern tile, inverted and blended lightly into cream paper, with low-opacity drifting artwork and two small glass bubbles. It never intercepts pointer input. Decorative motion can be paused and stops in background tabs. Reduced-motion preferences disable the animations.
+`BrandAtmosphere.tsx` reuses the exact supplied pattern tile. The 12 September after-hours theme removes the earlier cream-paper inversion and blends it softly into a dark ink surface with low-opacity amber artwork and two small glass bubbles. It never intercepts pointer input. Decorative motion can be paused and stops in background tabs. Reduced-motion preferences disable the animations.
 
 The header has a shared animated glass highlight on hover/focus, rolling labels, warm translucent booking control, and an accessible mobile sheet with chapter numbers and original artwork. Native page links retain the previous production navigation fix. Fine-pointer tilt is limited to 2.5 degrees per axis and disabled for touch/reduced motion.

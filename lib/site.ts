@@ -14,7 +14,9 @@ export function pageMetadata(
       description,
       url: `${SITE_URL}${path}`,
       type: "website",
+      siteName: "Dr. Drunk",
+      images: [{ url: `${SITE_URL}/brand/party.webp`, width: 1500, height: 1000, alt: "A Dr. Drunk celebration" }],
     },
-    twitter: { card: "summary", title: `${title} — Dr. Drunk`, description },
+    twitter: { card: "summary_large_image", title: `${title} — Dr. Drunk`, description, images: [`${SITE_URL}/brand/party.webp`] },
   };
 }

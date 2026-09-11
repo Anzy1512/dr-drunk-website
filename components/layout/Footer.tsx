@@ -1,8 +1,10 @@
 import { ArrowUpRight, ArrowUp } from "lucide-react";
 import { CONTACT_EMAIL, INSTAGRAM, TASTING_LINK } from "@/lib/brand-content";
+import { SocialLinks } from "./SocialLinks";
 export function Footer() {
   return (
     <footer id="appointment" className="appointment">
+      <SocialLinks />
       <div className="appointment-main">
         <div>
           <p className="eyebrow">06 / Your next very good night starts here</p>
@@ -51,7 +53,7 @@ export function Footer() {
       </p>
       <div className="footer-bottom">
         <a href="/" aria-label="Dr. Drunk home">
-          <img src="/brand/logo.webp" alt="Dr. Drunk" width="210" height="57" />
+          <span className="footer-wordmark">DR. DRUNK<span>YOUR PARTY PRACTITIONERS</span></span>
         </a>
         <p>Your total bar solution.</p>
         <a href="/" className="back-top">
@@ -59,6 +61,8 @@ export function Footer() {
           <ArrowUp size={16} />
         </a>
       </div>
+      <nav className="footer-directory" aria-label="Explore the website">{[["Cocktails","/cocktails"],["Weddings","/weddings"],["Experiences","/experiences"],["Gallery","/gallery"],["About","/about"],["Contact","/contact"],["FAQ","/faq"],["Website information","/site-info"]].map(([label,href])=><a key={href} href={href}>{label}</a>)}</nav>
+      <p className="footer-fineprint">© {new Date().getFullYear()} Dr. Drunk. Crafted for your kind of celebration.</p>
     </footer>
   );
 }

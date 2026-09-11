@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "./experience.css";
 import "./pages.css";
 import "./brand-motion.css";
+import "./night-theme.css";
 import { BrandAtmosphere } from "@/components/motion/BrandAtmosphere";
 import { GlassMotion } from "@/components/motion/GlassMotion";
 import { ScrollChoreography } from "@/components/motion/ScrollChoreography";
@@ -10,6 +11,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageMotion } from "@/components/motion/PageMotion";
 import { SITE_URL } from "@/lib/site";
+export const viewport: Viewport = { themeColor: "#100e0b", colorScheme: "dark" };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -22,7 +24,12 @@ export const metadata: Metadata = {
     description:
       "Your story, served with a twist. Bespoke mixology and total bar experiences.",
     type: "website",
+    url: SITE_URL,
+    siteName: "Dr. Drunk",
+    locale: "en_US",
+    images: [{ url: "/brand/party.webp", width: 1500, height: 1000, alt: "A Dr. Drunk celebration" }],
   },
+  twitter: { card: "summary_large_image", title: "Dr. Drunk — Your Party Practitioners", description: "Bespoke cocktails, wedding storytelling and tailored bar experiences.", images: ["/brand/party.webp"] },
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
@@ -53,8 +60,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": `${SITE_URL}/#organization`,
               name: "Dr. Drunk",
               url: SITE_URL,
+              logo: `${SITE_URL}/brand/logo.webp`,
+              slogan: "Your party practitioners",
+              contactPoint: { "@type": "ContactPoint", contactType: "Event enquiries", email: "Docdrunkofficial@gmail.com", telephone: "+66626439728" },
               email: "Docdrunkofficial@gmail.com",
               telephone: ["+66626439728", "+66924172299"],
               sameAs: ["https://www.instagram.com/docdrunk/"],

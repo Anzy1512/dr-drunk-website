@@ -1,5 +1,6 @@
 import { PageIntro } from "@/components/layout/PageIntro";
 import { pageMetadata } from "@/lib/site";
+import { FAQ } from "@/components/sections/FAQ";
 export const metadata = pageMetadata(
   "Book a Tasting",
   "Plan your Dr. Drunk bar experience. Book a cocktail tasting or video call and tell us about your occasion.",
@@ -35,6 +36,7 @@ export default function Contact() {
           starts becoming yours.
         </p>
       </section>
+      <FAQ />
     </main>
   );
 }

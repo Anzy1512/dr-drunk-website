@@ -38,7 +38,7 @@ export function Story() {
             <div className="story-layout">
               <figure className="story-photo">
                 <img
-                  src={`/brand/${chapter.image}.webp`}
+                  src={chapter.image}
                   width="1000"
                   height="1500"
                   alt={chapter.alt}

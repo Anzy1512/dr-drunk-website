@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import { NightEmblem } from "@/components/sections/NightEmblem";
 export function PageIntro({
   chapter,
   title,
@@ -12,8 +13,8 @@ export function PageIntro({
   title: string;
   accent: string;
   description: string;
-  image: string;
-  alt: string;
+  image?: string;
+  alt?: string;
   href: string;
 }) {
   return (
@@ -30,7 +31,7 @@ export function PageIntro({
           <ArrowDown size={18} />
         </a>
       </div>
-      <figure>
+      {image ? <figure>
         <img
           src={image}
           alt={alt}
@@ -38,7 +39,7 @@ export function PageIntro({
           height="1400"
           fetchPriority="high"
         />
-      </figure>
+      </figure> : <NightEmblem />}
     </section>
   );
 }

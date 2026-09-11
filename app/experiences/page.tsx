@@ -1,6 +1,7 @@
 import { PageIntro } from "@/components/layout/PageIntro";
 import { ArrowUpRight } from "lucide-react";
 import { pageMetadata } from "@/lib/site";
+import { ServingObjects } from "@/components/sections/ServingObjects";
 export const metadata = pageMetadata(
   "Bar Experiences",
   "Custom bar setups, mixology, flair, games, props, tasting and total bar services by Dr. Drunk.",
@@ -91,6 +92,7 @@ export default function Experiences() {
           </article>
         ))}
       </section>
+      <ServingObjects />
       <section className="gimmicks-section section-pad">
         <div>
           <p className="eyebrow">GIMMICKS, ENTERTAINMENT & FLAIR</p>

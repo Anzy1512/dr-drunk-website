@@ -111,7 +111,7 @@ export const storyChapters = [
       "A favourite dessert. A café you still talk about. We start with your memory and build the flavours around it.",
     example:
       "First date over cheesecake? Think creamy, dessert-inspired, and a little nostalgic.",
-    image: "couple",
+    image: "/brand/couple.webp",
     alt: "A couple celebrating together with cocktails",
   },
   {
@@ -123,8 +123,8 @@ export const storyChapters = [
       "The flavours, colours and feeling of a place you love can become a chapter on your menu.",
     example:
       "A first trip to Bali could inspire a tropical serve, with a little note sharing the memory.",
-    image: "cocktail-toast",
-    alt: "Two coupe cocktails raised together during a celebration",
+    image: "/gallery/event-32.webp",
+    alt: "Green glassware and natural textures at an event bar",
   },
   {
     id: "proposal",
@@ -135,7 +135,7 @@ export const storyChapters = [
       "Initialled stirrers, story-led coasters and a cocktail named for the big question. The details bring the chapter to life.",
     example:
       "Give the moment its own cocktail name, then let your guests discover the story behind it.",
-    image: "details",
-    alt: "Personalized cocktail stirrers displayed in a copper cup",
+    image: "/gallery/event-22.webp",
+    alt: "A couple together at a decorated bar",
   },
 ];

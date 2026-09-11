@@ -41,8 +41,8 @@ export default function Weddings() {
         title="A celebration"
         accent="that tastes like you."
         description="Your wedding should feel like walking into your own love story. Let every drink tell a little part of it."
-        image="/brand/couple.webp"
-        alt="A couple sharing a cocktail celebration"
+        image="/gallery/event-12.webp"
+        alt="A couple arrives with costumed performers"
         href="#story"
       />
       <Story />

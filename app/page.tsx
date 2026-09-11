@@ -6,6 +6,8 @@ import { People } from "@/components/sections/People";
 import { Reveals } from "@/components/motion/Reveals";
 import { IllustratedPractice } from "@/components/sections/IllustratedPractice";
 import { PartyTape } from "@/components/sections/PartyTape";
+import { FAQ } from "@/components/sections/FAQ";
+import { PartyProcess } from "@/components/sections/PartyProcess";
 export default function Home() {
   return (
     <>
@@ -26,9 +28,11 @@ export default function Home() {
           Step into the complete event gallery <span>→</span>
         </a>
         <People />
+        <PartyProcess />
         <a className="chapter-link" href="/about">
           Meet the practice <span>→</span>
         </a>
+        <FAQ compact />
       </main>
       <Reveals />
     </>
