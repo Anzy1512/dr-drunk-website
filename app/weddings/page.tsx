@@ -2,6 +2,7 @@ import { PageIntro } from "@/components/layout/PageIntro";
 import { Story } from "@/components/sections/Story";
 import { ArrowUpRight } from "lucide-react";
 import { pageMetadata } from "@/lib/site";
+import { DepthList } from "@/components/sections/DepthList";
 export const metadata = pageMetadata(
   "Wedding Stories",
   "Your love story told through bespoke cocktails, memory-lane menus and themed bar experiences.",
@@ -62,13 +63,7 @@ export default function Weddings() {
             <ArrowUpRight size={18} />
           </a>
         </div>
-        {details.map(([title, text], i) => (
-          <article className="detail-row" key={title}>
-            <span>{String(i + 1).padStart(2, "0")}</span>
-            <h3>{title}</h3>
-            <p>{text}</p>
-          </article>
-        ))}
+        <DepthList items={details} label="Wedding details" />
         <div className="creative-note">
           <h3>A few conversation starters.</h3>
           <p>

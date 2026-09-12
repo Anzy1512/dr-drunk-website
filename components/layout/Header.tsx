@@ -41,7 +41,7 @@ export function Header() {
   return (
     <header className="site-header">
       <a href="/" className="brand" aria-label="Dr. Drunk home">
-        <img src="/brand/logo.webp" alt="Dr. Drunk" width="210" height="57" />
+        <img src="/brand/logo-transparent.svg" alt="Dr. Drunk" width="210" height="57" />
       </a>
       <nav ref={menu} className="glass-nav" aria-label="Main navigation" onMouseLeave={() => highlight(menu.current?.querySelector<HTMLElement>('[aria-current="page"]') ?? null)} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) highlight(menu.current?.querySelector<HTMLElement>('[aria-current="page"]') ?? null); }}>
         <span className="nav-glass-pill" ref={pill} aria-hidden="true" />

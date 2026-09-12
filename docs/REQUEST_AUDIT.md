@@ -34,3 +34,11 @@ The later dark-theme request supersedes the earlier cream background. Existing s
 | Continue without rebuilding completed work | Existing source extraction, 100 catalogue rows, 14 gimmicks, eight services, six wedding directions, team/collaborators and four downloadable originals retained. Previous interactions remain in place. |
 
 Search metadata is prepared, but the current access-controlled site is not publicly crawlable. Existing sharing is preserved. Public search visibility requires an explicit access decision and search-engine crawling; no ranking or rich-result guarantee is made.
+
+## Latest five requested changes
+
+1. Original logo preserved in a transparent SVG alpha-filter asset; the stethoscope is explicitly retained and its chestpiece receives subtle motion.
+2. Website Information removed from the frontend, footer and sitemap. Its former route returns 404. The site now has eight pages.
+3. Cocktails gains actual Three.js viewpoints, a Theatre.js garnish swirl, ingredient shortcuts that search the existing catalogue, and a ten-category mood browser with three source-grounded previews.
+4. Weddings and Experiences replace flat lists with layered, perspective-aware, collapsible cards. Fourteen entertainment ideas can be selected and explored through an explicit email link. Existing source content is retained.
+5. Theatre.js coordinates ambient drift/light, card entrances and the 3D flourish. Current 21st.dev spotlight/tilt references are recorded in MOTION_REFERENCES.md. Shared hover, focus, touch and reduced-motion behavior carries throughout the site.

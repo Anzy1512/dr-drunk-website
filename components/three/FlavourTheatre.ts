@@ -46,13 +46,13 @@ export function createFlavourTheatre() {
   const surface = new THREE.Mesh(new THREE.CircleGeometry(0.99, 48), shimmer);
   surface.rotation.x = -Math.PI / 2; surface.position.y = 0.768;
   // Attach the surface to the glass so the liquid stays aligned during camera direction.
-  return { group, surface, bubbles, update(time: number, progress: number) {
+  return { group, surface, bubbles, update(time: number, progress: number, flourish = 0) {
     shimmer.uniforms.time.value = time;
-    wheel.position.y = 0.8 + Math.sin(time * 0.7) * 0.08 + progress * 0.3;
-    wheel.rotation.z = -0.35 + Math.sin(time * 0.4) * 0.15 + progress * 0.9;
+    wheel.position.y = 0.8 + Math.sin(time * 0.7) * 0.08 + progress * 0.3 + flourish * 0.3;
+    wheel.rotation.z = -0.35 + Math.sin(time * 0.4) * 0.15 + progress * 0.9 + flourish * 2;
     wheel.rotation.y = 0.3 + Math.sin(time * 0.35) * 0.22;
     mint.rotation.z = Math.sin(time * 0.5) * 0.14 - progress * 0.3;
-    mint.position.y = -0.85 + Math.cos(time * 0.6) * 0.06;
+    mint.position.y = -0.85 + Math.cos(time * 0.6) * 0.06 - flourish * 0.18;
     for (let i = 0; i < 18; i++) {
       const phase = (i / 18 + time * 0.035) % 1;
       const angle = i * 2.39996;

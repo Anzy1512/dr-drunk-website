@@ -4,6 +4,8 @@ import "./experience.css";
 import "./pages.css";
 import "./brand-motion.css";
 import "./night-theme.css";
+import "./theatre-theme.css";
+import { TheatreMotion } from "@/components/motion/TheatreMotion";
 import { BrandAtmosphere } from "@/components/motion/BrandAtmosphere";
 import { GlassMotion } from "@/components/motion/GlassMotion";
 import { ScrollChoreography } from "@/components/motion/ScrollChoreography";
@@ -54,6 +56,7 @@ export default function RootLayout({
         <PageMotion />
         <GlassMotion />
         <ScrollChoreography />
+        <TheatreMotion />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -63,7 +66,7 @@ export default function RootLayout({
               "@id": `${SITE_URL}/#organization`,
               name: "Dr. Drunk",
               url: SITE_URL,
-              logo: `${SITE_URL}/brand/logo.webp`,
+              logo: `${SITE_URL}/brand/logo-transparent.svg`,
               slogan: "Your party practitioners",
               contactPoint: { "@type": "ContactPoint", contactType: "Event enquiries", email: "Docdrunkofficial@gmail.com", telephone: "+66626439728" },
               email: "Docdrunkofficial@gmail.com",

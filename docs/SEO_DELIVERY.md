@@ -1,6 +1,6 @@
 # Search and sharing readiness
 
-All nine routes provide descriptive titles, descriptions, canonical URLs, Open Graph image metadata and Twitter large-image cards. The site has one H1 per page, semantic navigation, descriptive photo alternatives, readable source-grounded content and contextual internal links. The sitemap includes all nine routes; robots points to the published sitemap.
+All eight routes provide descriptive titles, descriptions, canonical URLs, Open Graph image metadata and Twitter large-image cards. The site has one H1 per page, semantic navigation, descriptive photo alternatives, readable source-grounded content and contextual internal links. The sitemap includes all eight routes; robots points to the published sitemap.
 
 Organization JSON-LD identifies Dr. Drunk using the supplied name, logo, contact details and Instagram profile. The FAQ page includes eight visible questions and matching FAQPage JSON-LD. Structured data does not guarantee a search enhancement.
 

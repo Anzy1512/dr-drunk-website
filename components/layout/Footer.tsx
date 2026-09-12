@@ -61,7 +61,7 @@ export function Footer() {
           <ArrowUp size={16} />
         </a>
       </div>
-      <nav className="footer-directory" aria-label="Explore the website">{[["Cocktails","/cocktails"],["Weddings","/weddings"],["Experiences","/experiences"],["Gallery","/gallery"],["About","/about"],["Contact","/contact"],["FAQ","/faq"],["Website information","/site-info"]].map(([label,href])=><a key={href} href={href}>{label}</a>)}</nav>
+      <nav className="footer-directory" aria-label="Explore the website">{[["Cocktails","/cocktails"],["Weddings","/weddings"],["Experiences","/experiences"],["Gallery","/gallery"],["About","/about"],["Contact","/contact"],["FAQ","/faq"]].map(([label,href])=><a key={href} href={href}>{label}</a>)}</nav>
       <p className="footer-fineprint">© {new Date().getFullYear()} Dr. Drunk. Crafted for your kind of celebration.</p>
     </footer>
   );

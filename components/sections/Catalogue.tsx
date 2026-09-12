@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Search, ArrowUpRight } from "lucide-react";
 import { catalogue, catalogueCount } from "@/lib/catalogue";
 import { TASTING_LINK } from "@/lib/brand-content";
@@ -13,6 +13,13 @@ import {
 export function Catalogue() {
   const [query, setQuery] = useState(""),
     [category, setCategory] = useState("all");
+  useEffect(() => {
+    const choose = (event: Event) => { const note = (event as CustomEvent<unknown>).detail; if (typeof note === "string") { setQuery(note); setCategory("all"); } };
+    const chooseCategory = (event: Event) => { const id = (event as CustomEvent<unknown>).detail; if (typeof id === "string" && catalogue.some(group => group.id === id)) { setQuery(""); setCategory(id); } };
+    window.addEventListener("dr-drunk:ingredient", choose);
+    window.addEventListener("dr-drunk:category", chooseCategory);
+    return () => { window.removeEventListener("dr-drunk:ingredient", choose); window.removeEventListener("dr-drunk:category", chooseCategory); };
+  }, []);
   const results = useMemo(
     () =>
       catalogue

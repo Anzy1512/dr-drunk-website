@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { Pause, Play, ArrowDown } from "lucide-react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { Pause, Play, ArrowDown, Rotate3d, Sparkles, Search } from "lucide-react";
 import type { Experience } from "@/components/three/createExperience";
 const serves = [
   {
@@ -8,24 +8,28 @@ const serves = [
     color: "#d8770d",
     ingredients: "Whisky · Chai syrup",
     character: "Warm, spiced, and wonderfully familiar.",
+    notes: ["Whisky", "Chai"],
   },
   {
     name: "Cgi Cgi",
     color: "#99b844",
     ingredients: "Gin · Cucumber · Lime",
     character: "A little fresh thinking for your glass.",
+    notes: ["Gin", "Cucumber", "Lime"],
   },
   {
     name: "Guava Island",
     color: "#ea7b76",
     ingredients: "Rum · Pink guava · Coconut cream · Kaffir",
     character: "A tropical turn for your next celebration.",
+    notes: ["Rum", "Guava", "Coconut", "Kaffir"],
   },
 ];
 export function InteractiveLab() {
   const [selected, setSelected] = useState(0),
     [ready, setReady] = useState(false),
     [paused, setPaused] = useState(false);
+  const [view, setView] = useState(0);
   const host = useRef<HTMLDivElement>(null),
     frame = useRef<HTMLDivElement>(null),
     engine = useRef<Experience | null>(null),
@@ -88,10 +92,11 @@ export function InteractiveLab() {
     setSelected(index);
     selectedRef.current = index;
     engine.current?.setRecipe(serves[index].color);
+    engine.current?.swirl();
   }
   const serve = serves[selected];
   return (
-    <section className="interactive-lab" ref={frame}>
+    <section className="interactive-lab" ref={frame} style={{ "--serve-color": serve.color } as CSSProperties}>
       <div className="lab-intro">
         <p className="eyebrow">THE COCKTAIL LAB / DR. DRUNK</p>
         <h1>
@@ -119,17 +124,19 @@ export function InteractiveLab() {
             </button>
           ))}
         </div>
-        <div className="serve-description" aria-live="polite">
+        <div className="serve-description" aria-live="polite" key={serve.name}>
           <h2>{serve.name}</h2>
           <p>{serve.ingredients}</p>
           <p className="script">{serve.character}</p>
         </div>
+        <div className="ingredient-trail"><p className="eyebrow">FOLLOW A FLAVOUR</p><div>{serve.notes.map(note => <a key={note} href="#collection" onClick={() => window.dispatchEvent(new CustomEvent("dr-drunk:ingredient", { detail: note }))}><Search size={14} />{note}</a>)}</div><p>Find more drinks with an ingredient you love.</p></div>
         <a href="#collection" className="text-link">
           Explore all 100 menu entries
           <ArrowDown size={18} />
         </a>
       </div>
       <div className={`lab-installation ${ready ? "is-ready" : ""}`}>
+        <div className="lab-orbit" aria-hidden="true"><span>SPIRIT</span><span>CHARACTER</span><span>A LITTLE MISCHIEF</span></div>
         <div className="installation-backdrop">
           <img
             className="scene-fallback"
@@ -140,8 +147,10 @@ export function InteractiveLab() {
           />
         </div>
         <div className="scene-canvas" ref={host} />
+        <div className="lab-specimen" aria-hidden="true"><span>THE DOCTOR IS IN</span><strong>{String(selected + 1).padStart(2, "0")}</strong><span>{serve.name}</span></div>
+        {ready && <div className="scene-controls"><div role="group" aria-label="Cocktail viewpoints">{["The glass", "The garnish", "The twist"].map((label, index) => <button key={label} aria-pressed={view === index} onClick={() => { setView(index); engine.current?.setView(index / 2); }}><Rotate3d size={16} />{label}</button>)}</div><button className="swirl-button" disabled={paused} onClick={() => engine.current?.swirl()}><Sparkles size={18} />Give it a swirl</button></div>}
         <div className="lab-caption">
-          <span>AN EXPLORATION OF FLAVOUR & FORM</span>
+          <span>{ready ? "MOVE YOUR POINTER. EXPLORE THE POUR." : "AN EXPLORATION OF FLAVOUR & FORM"}</span>
           {ready && (
             <button
               className="motion-button"

@@ -2,6 +2,8 @@ import { PageIntro } from "@/components/layout/PageIntro";
 import { ArrowUpRight } from "lucide-react";
 import { pageMetadata } from "@/lib/site";
 import { ServingObjects } from "@/components/sections/ServingObjects";
+import { DepthList } from "@/components/sections/DepthList";
+import { GimmickSelector } from "@/components/sections/GimmickSelector";
 export const metadata = pageMetadata(
   "Bar Experiences",
   "Custom bar setups, mixology, flair, games, props, tasting and total bar services by Dr. Drunk.",
@@ -84,13 +86,7 @@ export default function Experiences() {
             <ArrowUpRight size={18} />
           </a>
         </div>
-        {services.map(([title, text], i) => (
-          <article className="detail-row" key={title}>
-            <span>{String(i + 1).padStart(2, "0")}</span>
-            <h3>{title}</h3>
-            <p>{text}</p>
-          </article>
-        ))}
+        <DepthList items={services} label="Bar services" />
       </section>
       <ServingObjects />
       <section className="gimmicks-section section-pad">
@@ -114,11 +110,7 @@ export default function Experiences() {
             <ArrowUpRight size={18} />
           </a>
         </div>
-        <ul>
-          {gimmicks.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        <GimmickSelector items={gimmicks} />
       </section>
     </main>
   );

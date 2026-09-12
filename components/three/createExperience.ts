@@ -6,11 +6,14 @@ import { directCamera } from "./CameraRig";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { createFlavourTheatre } from "./FlavourTheatre";
+import { brandScore } from "@/lib/motion-score";
 
 export type Experience = {
   dispose: () => void;
   setPaused: (paused: boolean) => void;
   setRecipe: (color: string) => void;
+  setView: (view: number) => void;
+  swirl: () => void;
 };
 
 export function createExperience(
@@ -52,6 +55,11 @@ export function createExperience(
     start = performance.now();
   let lastTick = start, motionTime = 0;
   const director = { progress: 0 };
+  const view = { progress: 0 };
+  const score = brandScore().sheet("Pour", opening.classList.contains("opening") ? "Home" : "Lab");
+  const scoreObject = score.object("Direction", { turn: 0, lift: 0, scatter: 0 });
+  let flourish = { turn: 0, lift: 0, scatter: 0 };
+  const unsubscribeScore = scoreObject.onValuesChange(value => { flourish = value; invalidate(); });
   const journey = opening.classList.contains("opening")
     ? gsap.to(director, {
         progress: 1,
@@ -69,11 +77,11 @@ export function createExperience(
   function draw(now: number) {
     frame = 0;
     if (disposed || lost || !visible || document.hidden) return;
-    const progress = director.progress;
+    const progress = opening.classList.contains("opening") ? director.progress : view.progress;
     const delta = Math.min((now - lastTick) / 1000, 0.05);
     lastTick = now;
     if (!paused) motionTime += delta;
-    theatre.update(motionTime, progress);
+    theatre.update(motionTime, progress, flourish.scatter);
     directCamera(
       camera,
       sculpture,
@@ -83,6 +91,9 @@ export function createExperience(
       motionTime,
       !paused,
     );
+    sculpture.rotation.y += flourish.turn * 0.06;
+    sculpture.position.y += flourish.lift;
+    brand.rotation.z = Math.sin(motionTime * 0.55) * 0.025 + flourish.turn * 0.07;
     try {
       renderer.render(scene, camera);
     } catch {
@@ -164,6 +175,12 @@ export function createExperience(
     >
   ).material;
   return {
+    setView(value) { gsap.to(view, { progress: value, duration: paused ? 0 : 1.1, ease: "power2.inOut", onUpdate: invalidate }); },
+    swirl() {
+      if (paused) return;
+      score.sequence.position = 0;
+      void score.sequence.play({ range: [0, 1], rate: 0.55 });
+    },
     setRecipe(value) {
       const color = new THREE.Color(value);
       gsap.to(liquid.color, {
@@ -176,6 +193,7 @@ export function createExperience(
     },
     setPaused(value) {
       paused = value;
+      if (paused) score.sequence.pause();
       lastTick = performance.now();
       pointer.set(0, 0);
       if (paused) {
@@ -190,6 +208,8 @@ export function createExperience(
       journey?.scrollTrigger?.kill();
       journey?.kill();
       gsap.killTweensOf(liquid.color);
+      gsap.killTweensOf(view);
+      score.sequence.pause(); unsubscribeScore(); score.detachObject("Direction");
       resize.disconnect();
       observer.disconnect();
       host.removeEventListener("pointermove", move);

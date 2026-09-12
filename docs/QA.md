@@ -39,3 +39,13 @@ Mobile glass navigation opened and reached Experiences. FAQ opens through the En
 The compiled Worker returned 200 for all nine pages, sitemap and robots, and 404 for an unknown route. Every page has exactly one H1, metadata, a canonical, social image metadata and valid Organization JSON-LD. FAQPage contains all eight questions; sitemap contains nine URLs. No repeated image sources occur within any of the nine server-rendered pages. The gallery has 50 unique photo sources plus the single header logo.
 
 TypeScript, application ESLint and Sites production build passed. The known deferred Three.js chunk advisory and Vinext route-classification notice remain non-blocking. Physical-device performance and Safari coverage retain the limitations documented above.
+
+## Theatre.js and interaction update
+
+TypeScript and application ESLint passed. The Sites production build passed with eight page routes after removal of Website Information. A compiled-Worker check confirmed all eight pages, sitemap and robots return 200, and `/site-info` returns 404. Each remaining page has one H1, metadata, canonical and valid structured data, with no same-page duplicate image sources.
+
+Browser checks at 1440 × 900: the Theatre score reports ready, the cocktail page creates one WebGL canvas, Guava Island updates the source-grounded description and liquid, viewpoint selection and Swirl controls operate, and the Guava ingredient shortcut returns the single matching catalogue entry. The Spice It Up mood previews its source entries and filters the catalogue to ten entries. Wedding cards collapse by click and reopen with Enter. No console errors or warnings were reported.
+
+At 390 × 844, Cocktails and Experiences have no document overflow. Cocktails uses the original photo fallback without a canvas; mood tabs scroll horizontally within their own rail. Selecting Smoke bubble cocktails updates the entertainment panel and its explicit email subject without sending a message. Mobile cards, captions and controls remain readable. All source content and the 50-photo gallery remain preserved.
+
+The logo asset is the original artwork embedded in an SVG with an alpha filter. Generated attempts with distorted edges were excluded from publication. The header background behind the logo is explicitly transparent. The new score pauses for hidden documents and the ambient control; reduced-motion CSS removes new perspective/reveal animation. The prior hardware/Safari limitations still apply.
