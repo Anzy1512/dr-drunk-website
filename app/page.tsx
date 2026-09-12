@@ -1,3 +1,4 @@
+import { BrushArrow } from "@/components/sections/BrushArrow";
 import { Opening } from "@/components/sections/Opening";
 import { CocktailLab } from "@/components/sections/CocktailLab";
 import { Story } from "@/components/sections/Story";
@@ -17,20 +18,20 @@ export default function Home() {
         <IllustratedPractice />
         <CocktailLab />
         <a className="chapter-link" href="/cocktails">
-          Explore the complete cocktail collection <span>→</span>
+          Explore the complete cocktail collection <BrushArrow />
         </a>
         <Story />
         <a className="chapter-link dark-link" href="/weddings">
-          Design your wedding bar story <span>→</span>
+          Design your wedding bar story <BrushArrow />
         </a>
         <GoodTimes />
         <a className="chapter-link" href="/gallery">
-          Step into the complete event gallery <span>→</span>
+          Step into the complete event gallery <BrushArrow />
         </a>
         <People />
         <PartyProcess />
         <a className="chapter-link" href="/about">
-          Meet the practice <span>→</span>
+          Meet the practice <BrushArrow />
         </a>
         <FAQ compact />
       </main>

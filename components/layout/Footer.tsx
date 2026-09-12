@@ -7,7 +7,7 @@ export function Footer() {
       <SocialLinks />
       <div className="appointment-main">
         <div>
-          <p className="eyebrow">06 / Your next very good night starts here</p>
+          <p className="eyebrow">Your next very good night starts here</p>
           <h2>
             Need an
             <br />
@@ -46,7 +46,7 @@ export function Footer() {
         </a>
       </div>
       <p className="other-services">
-        THE WHOLE BAR, TAKEN CARE OF
+        <strong>The whole bar, taken care of</strong>
         <span>
           Alcohol supply · Glassware rentals · Room drops · Hangover kits
         </span>

@@ -11,7 +11,7 @@ export function CocktailLab() {
     >
       <div className="section-heading reveal">
         <div>
-          <p className="eyebrow">02 / A taste of the unexpected</p>
+          <p className="eyebrow">A taste of the unexpected</p>
           <h2 id="cocktails-title">
             100+ ways
             <br />
@@ -57,9 +57,9 @@ export function CocktailLab() {
               <TabsContent value={category.id} key={category.id}>
                 <p className="menu-note">{category.note}</p>
                 <ol>
-                  {category.drinks.map((drink, i) => (
+                  {category.drinks.map((drink) => (
                     <li key={drink.name}>
-                      <span className="drink-number">0{i + 1}</span>
+
                       <div>
                         <h3>{drink.name}</h3>
                         <p>{drink.ingredients}</p>

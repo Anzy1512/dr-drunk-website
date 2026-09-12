@@ -147,7 +147,7 @@ export function InteractiveLab() {
           />
         </div>
         <div className="scene-canvas" ref={host} />
-        <div className="lab-specimen" aria-hidden="true"><span>THE DOCTOR IS IN</span><strong>{String(selected + 1).padStart(2, "0")}</strong><span>{serve.name}</span></div>
+        <div className="lab-specimen" aria-hidden="true"><span>THE DOCTOR IS IN</span><span>{serve.name}</span></div>
         {ready && <div className="scene-controls"><div role="group" aria-label="Cocktail viewpoints">{["The glass", "The garnish", "The twist"].map((label, index) => <button key={label} aria-pressed={view === index} onClick={() => { setView(index); engine.current?.setView(index / 2); }}><Rotate3d size={16} />{label}</button>)}</div><button className="swirl-button" disabled={paused} onClick={() => engine.current?.swirl()}><Sparkles size={18} />Give it a swirl</button></div>}
         <div className="lab-caption">
           <span>{ready ? "MOVE YOUR POINTER. EXPLORE THE POUR." : "AN EXPLORATION OF FLAVOUR & FORM"}</span>

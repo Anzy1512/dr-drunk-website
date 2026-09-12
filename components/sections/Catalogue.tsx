@@ -92,12 +92,7 @@ export function Catalogue() {
             <section key={group.id} className="catalogue-group">
               <div>
                 <p className="eyebrow">
-                  {String(
-                    catalogue.indexOf(
-                      catalogue.find((c) => c.id === group.id)!,
-                    ) + 1,
-                  ).padStart(2, "0")}{" "}
-                  / {group.drinks.length} entries
+                  {group.drinks.length} entries
                 </p>
                 <h3>{group.name}</h3>
                 {group.id === "specialty" && (

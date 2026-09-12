@@ -12,7 +12,7 @@ export function People() {
         <figcaption>YOUR PARTY PRACTITIONERS, IN THEIR ELEMENT.</figcaption>
       </figure>
       <div className="people-copy reveal">
-        <p className="eyebrow">05 / The people behind the pour</p>
+        <p className="eyebrow">The people behind the pour</p>
         <h2 id="people-title">
           A warm smile.
           <br />A cold drink.

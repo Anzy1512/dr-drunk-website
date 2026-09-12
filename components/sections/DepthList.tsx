@@ -17,7 +17,7 @@ export function DepthList({ items, label }: { items: string[][]; label: string }
   return <div className="depth-grid" aria-label={label} onPointerMove={move} onPointerLeave={reset}>
     {items.map(([title, text], index) => { const Icon = icons[index % icons.length]; return <div className="depth-shell" key={title}>
       <details className="depth-card" open>
-        <summary><span className="depth-number">{String(index + 1).padStart(2, "0")}</span><Icon className="depth-icon" size={30} aria-hidden="true" /><h3>{title}</h3><Plus className="depth-toggle" size={20} aria-hidden="true" /></summary>
+        <summary><Icon className="depth-icon" size={30} aria-hidden="true" /><h3>{title}</h3><Plus className="depth-toggle" size={20} aria-hidden="true" /></summary>
         <div className="depth-body"><p>{text}</p></div>
       </details>
     </div>; })}

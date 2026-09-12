@@ -92,8 +92,7 @@ export function Opening() {
           </div>
           <div className="scene-canvas" ref={host} />
           <div className="stage-topline">
-            <span>DR. DRUNK / MIXOLOGY</span>
-            <span>EST. GOOD TIMES</span>
+            <span className="good-times-badge"><i aria-hidden="true">✳</i> Est. good times</span>
           </div>
           <div className="stage-bottomline">
             <span className="script">Crafted for your kind of night.</span>
@@ -109,7 +108,7 @@ export function Opening() {
             )}
           </div>
           <div className="specimen-label">
-            <span>01</span> SPIRIT. SCIENCE. A LITTLE MISCHIEF.
+            SPIRIT. SCIENCE. A LITTLE MISCHIEF.
           </div>
           <div className="good-times-stamp" aria-hidden="true"><span>GOOD TIMES</span><strong>Rx</strong><span>PRESCRIBED</span></div>
         </div>
@@ -141,7 +140,7 @@ export function Opening() {
           <div className="hero-flavour-note"><span>100+</span><p>Non-classic cocktail options.<br /><strong>One menu that feels like you.</strong></p><span className="note-spark" aria-hidden="true">✳</span></div>
         </div>
         <p className="hero-edition">
-          YOUR TOTAL BAR SOLUTION <span>01 / THE FIRST SIP</span>
+          YOUR TOTAL BAR SOLUTION <span>THE FIRST SIP</span>
         </p>
       </section>
       <section
@@ -150,7 +149,7 @@ export function Opening() {
         aria-labelledby="practice-title"
       >
         <div className="practice-copy">
-          <p className="eyebrow">01 / The practice</p>
+          <p className="eyebrow">The practice</p>
           <h2 id="practice-title">
             A bar?
             <br />
@@ -165,15 +164,15 @@ export function Opening() {
           </p>
           <div className="practice-services">
             <div>
-              <span>01</span>
+              <span aria-hidden="true">✳</span>
               <p>Mixology with imagination</p>
             </div>
             <div>
-              <span>02</span>
+              <span aria-hidden="true">✳</span>
               <p>A bar made for your occasion</p>
             </div>
             <div>
-              <span>03</span>
+              <span aria-hidden="true">✳</span>
               <p>Flair, warmth & a very good time</p>
             </div>
           </div>

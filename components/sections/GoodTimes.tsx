@@ -9,20 +9,14 @@ export function GoodTimes() {
     >
       <div className="section-heading reveal">
         <div>
-          <p className="eyebrow">04 / Beyond the cocktail</p>
+          <p className="eyebrow">Beyond the cocktail</p>
           <h2 id="good-times-title">
             We bring the
             <br />
             <span className="script">enter“treatment”.</span>
           </h2>
         </div>
-        <p>
-          Flair behind the bar.
-          <br />
-          Energy on the dancefloor.
-          <br />
-          Little details everywhere.
-        </p>
+<div className="good-times-note"><span className="script">The mood? Unforgettable.</span><p>Flair behind the bar. Rhythm on the dancefloor. Thoughtful little details, everywhere.</p><span className="note-spark" aria-hidden="true">✳</span></div>
       </div>
       <div className="event-gallery">
         <figure className="event-photo event-bar reveal">
@@ -34,7 +28,7 @@ export function GoodTimes() {
             loading="lazy"
           />
           <figcaption>
-            <span>01 / SET THE SCENE</span>
+            <span>SET THE SCENE</span>
             <h3>A bar with a personality.</h3>
             <p>
               The glassware, the props, the presentation.
@@ -45,19 +39,19 @@ export function GoodTimes() {
         </figure>
         <figure className="event-photo event-party reveal">
           <img
-            src="/brand/party.webp"
-            alt="Guests and entertainers celebrating together on a crowded dancefloor"
-            width="1500"
-            height="1000"
+            src="/brand/sax.webp"
+            alt="A saxophonist performing in warm amber light beside a sculpted golden event bar"
+            width="1067"
+            height="1600"
             loading="lazy"
           />
           <figcaption>
-            <span>02 / FEEL THE ROOM</span>
-            <h3>Good drinks. Better memories.</h3>
+            <span>FEEL THE ROOM</span>
+            <h3>Good spirits. Live rhythm.</h3>
             <p>
-              Warm smiles, cold drinks, and a team
+              A live soundtrack, a golden glow,
               <br />
-              that gets the party going.
+              and a room that comes alive.
             </p>
           </figcaption>
         </figure>
@@ -70,7 +64,7 @@ export function GoodTimes() {
             loading="lazy"
           />
           <figcaption>
-            <span>03 / EXPECT THE UNEXPECTED</span>
+            <span>EXPECT THE UNEXPECTED</span>
             <h3>A little extra mischief.</h3>
             <p>
               Costumes, games and playful props.

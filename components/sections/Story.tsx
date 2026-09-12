@@ -9,7 +9,7 @@ export function Story() {
       className="story-section section-pad"
       aria-labelledby="story-title"
     >
-      <p className="eyebrow">03 / Storytelling through cocktails</p>
+      <p className="eyebrow">Storytelling through cocktails</p>
       <div className="story-heading reveal">
         <h2 id="story-title">
           Your story.
@@ -22,12 +22,12 @@ export function Story() {
         </p>
       </div>
       <Tabs defaultValue="date" className="story-tabs">
-        <div className="chapter-nav">
-          <span className="chapter-label">IMAGINE YOUR MENU</span>
+        <div className="chapter-nav"><span className="chapter-invitation">Pick your moment</span>
+          <span className="chapter-label">Every love story has a flavour</span>
           <TabsList variant="line" aria-label="Wedding story chapters">
             {storyChapters.map((chapter) => (
               <TabsTrigger key={chapter.id} value={chapter.id}>
-                <span>{chapter.number}</span>
+                <span className="chapter-spark" aria-hidden="true">✳</span>
                 {chapter.name}
               </TabsTrigger>
             ))}
@@ -45,14 +45,11 @@ export function Story() {
                   loading="lazy"
                 />
                 <figcaption>
-                  {chapter.number} / {chapter.name}
+                  {chapter.name}
                 </figcaption>
               </figure>
               <div className="story-content">
-                <span className="chapter-number" aria-hidden="true">
-                  {chapter.number}
-                </span>
-                <p className="eyebrow">A memory-lane menu</p>
+                <p className="eyebrow">Your memories. Our muse.</p>
                 <h3>{chapter.title}</h3>
                 <p>{chapter.description}</p>
                 <blockquote>{chapter.example}</blockquote>

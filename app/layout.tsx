@@ -5,6 +5,7 @@ import "./pages.css";
 import "./brand-motion.css";
 import "./night-theme.css";
 import "./theatre-theme.css";
+import "./editorial-polish.css";
 import { TheatreMotion } from "@/components/motion/TheatreMotion";
 import { BrandAtmosphere } from "@/components/motion/BrandAtmosphere";
 import { GlassMotion } from "@/components/motion/GlassMotion";

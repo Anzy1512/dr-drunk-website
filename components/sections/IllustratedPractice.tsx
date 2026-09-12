@@ -7,9 +7,9 @@ const chapters: { kind: IllustrationKind; title: string; accent: string; copy: s
 ];
 export function IllustratedPractice() {
   return <section className="illustrated-practice section-pad" aria-labelledby="illustrated-title">
-    <div className="illustrated-heading"><p className="eyebrow">THE DR. DRUNK FORMULA</p><h2 id="illustrated-title">Good times, <span className="script">by design.</span></h2></div>
-    <div className="illustration-cards">{chapters.map((chapter, i) => <a href={chapter.href} key={chapter.kind} className="illustration-card glass-tilt">
-      <div className="illustration-card-top"><span>0{i + 1} / THE PRACTICE</span><ArrowUpRight size={20} /></div>
+    <div className="illustrated-heading"><p className="eyebrow">The Dr. Drunk formula</p><h2 id="illustrated-title">Good times, <span className="script">by design.</span></h2></div>
+    <div className="illustration-cards">{chapters.map((chapter) => <a href={chapter.href} key={chapter.kind} className="illustration-card glass-tilt">
+      <div className="illustration-card-top"><span>THE PRACTICE</span><ArrowUpRight size={20} /></div>
       <BrandIllustration kind={chapter.kind} />
       <h3>{chapter.title}<span className="script">{chapter.accent}</span></h3><p>{chapter.copy}</p>
     </a>)}</div>

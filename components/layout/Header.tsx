@@ -73,9 +73,9 @@ export function Header() {
             <SheetDescription>Your party practitioners.</SheetDescription>
           </SheetHeader>
           <nav aria-label="Mobile navigation">
-            {links.map(([label, href], index) => (
+            {links.map(([label, href]) => (
               <a key={href} href={href} aria-current={path === href ? "page" : undefined} onClick={() => setOpen(false)}>
-                <span className="mobile-chapter">0{index + 1}</span><span>{label}</span>
+                <span>{label}</span>
                 <ArrowUpRight size={22} />
               </a>
             ))}

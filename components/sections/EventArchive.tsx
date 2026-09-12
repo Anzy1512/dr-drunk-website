@@ -69,7 +69,7 @@ export function EventArchive() {
               loading="lazy"
             />}
             <span>
-              <span>{String(index + 1).padStart(2, "0")}</span>
+
               <Expand size={17} />
             </span>
           </button>
